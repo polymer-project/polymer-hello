@@ -1,0 +1,32 @@
+<link rel="import" href="../../node_modules/@polymer/polymer/polymer-element.html">
+
+<dom-module id="polymer-hello-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class PolymerHelloApp extends Polymer.Element {
+      static get is() { return 'polymer-hello-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'polymer-hello-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PolymerHelloApp.is, PolymerHelloApp);
+  </script>
+</dom-module>

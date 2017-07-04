@@ -1,0 +1,7 @@
+{
+  "name": "polymer-hello",
+  "short_name": "polymer-hello",
+  "description": "A simple polymer application to learn how to build web apps with polymer",
+  "start_url": "/",
+  "display": "standalone"
+}

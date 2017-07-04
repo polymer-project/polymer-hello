@@ -1,0 +1,12 @@
+{
+  "name": "polymer-hello",
+  "description": "A simple polymer application to learn how to build web apps with polymer",
+  "main": "index.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester",
+    "webcomponentsjs": "webcomponents/webcomponentsjs"
+  }
+}

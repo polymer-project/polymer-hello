@@ -1,0 +1,71 @@
+<link rel="import" href="../../node_modules/@polymer/polymer/polymer-element.html">
+
+<dom-module id="how-to">
+    <template>
+        <p>[[msg]]</p>
+        <h1>Steps</h1>
+        <ul>
+            <li>
+                Change <b>bower.json</b> file name to <b>package.json</b>
+            </li>
+            <li>
+                Edit your package.json file and delete version numbers like this: <b>#1.2.3!</b>
+            </li>
+            <li>
+                Edit your <b>index.html</b> file and change web component loader like this:
+                <code>[[webLoader]]</code>
+            </li>
+            <li>
+                When you create new component, import base element like this:
+                <code>[[baseEl]]</code>
+            </li>
+            <li>
+                Run this command to serve: <code>polymer serve</code>
+            </li>
+            <li>
+                Run this command to build: <code>polymer build</code>
+            </li>
+        </ul>
+
+        <style>
+            ul {
+                list-style-type: decimal;
+            }
+            ul > li {
+                margin-top: 15px;
+            }
+            code {
+                padding: 5px;
+                background-color: #e8e8e8;
+                border-radius: 5px;
+                color: #000;
+            }
+        </style>
+    </template>
+    <script>
+        class HowTo extends Polymer.Element {
+            static get is() { return 'how-to'; }
+            static get properties() {
+                return {
+                    msg: {
+                        type: String,
+                        value: 'Left Bower and USE NPM.',
+                    },
+                    webLoader: {
+                        type: String,
+                        value: '<script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"> ',
+                    },
+                    baseEl: {
+                        type: String,
+                        value: '<link rel="import" href="../../node_modules/@polymer/polymer/polymer-element.html">',
+                    }
+                }
+            }
+            static get ready() {
+                console.log(this.msg)
+            }
+        }
+
+        window.customElements.define(HowTo.is, HowTo);
+    </script>
+</dom-module>
